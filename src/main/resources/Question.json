@@ -1,0 +1,83 @@
+[
+  {
+    "enunciado": "Qual é o principal objetivo da ODS 3?",
+    "alternativaA": "Reduzir o consumo de energia",
+    "alternativaB": "Assegurar uma vida saudável e promover o bem-estar para todos",
+    "alternativaC": "Melhorar a infraestrutura de transportes",
+    "alternativaD": "Promover o comércio internacional",
+    "correta": "B",
+    "explicacao": "A ODS 3 visa saúde e bem-estar para todos."
+  },
+  {
+    "enunciado": "O que contribui diretamente para uma boa saúde mental?",
+    "alternativaA": "Privação de sono",
+    "alternativaB": "Sedentarismo",
+    "alternativaC": "Atividade física regular",
+    "alternativaD": "Excesso de trabalho",
+    "correta": "C",
+    "explicacao": "A atividade física libera endorfina, reduzindo o estresse."
+  },
+  {
+    "enunciado": "Qual das ações abaixo está relacionada à promoção da saúde?",
+    "alternativaA": "Fumar regularmente",
+    "alternativaB": "Evitar vacinas",
+    "alternativaC": "Manter uma alimentação balanceada",
+    "alternativaD": "Consumir bebidas alcoólicas em excesso",
+    "correta": "C",
+    "explicacao": "Uma alimentação balanceada é fundamental para a promoção da saúde."
+  },
+  {
+    "enunciado": "O que é um hábito saudável para a saúde cardiovascular?",
+    "alternativaA": "Fumar esporadicamente",
+    "alternativaB": "Comer fast food regularmente",
+    "alternativaC": "Manter uma dieta equilibrada e praticar exercícios",
+    "alternativaD": "Tomar energéticos diariamente",
+    "correta": "C",
+    "explicacao": "Manter uma dieta equilibrada e praticar exercícios é essencial para a saúde cardiovascular."
+  },
+  {
+    "enunciado": "Qual é um dos pilares da educação de qualidade?",
+    "alternativaA": "Ensino baseado em punições",
+    "alternativaB": "Acesso limitado à tecnologia",
+    "alternativaC": "Formação continuada de professores",
+    "alternativaD": "Exclusão de alunos com deficiência",
+    "correta": "C",
+    "explicacao": "A formação continuada de professores é essencial para garantir uma educação de qualidade."
+  },
+  {
+    "enunciado": "Qual é a importância da vacinação?",
+    "alternativaA": "Aumentar o consumo de medicamentos",
+    "alternativaB": "Promover imunidade e prevenir doenças",
+    "alternativaC": "Substituir hábitos saudáveis",
+    "alternativaD": "Combater a obesidade",
+    "correta": "B",
+    "explicacao": "A vacinação é fundamental para promover imunidade e prevenir doenças."
+  },
+  {
+    "enunciado": "Qual ação contribui para um ambiente escolar inclusivo?",
+    "alternativaA": "Segregação por nível de aprendizagem",
+    "alternativaB": "Ausência de adaptações curriculares",
+    "alternativaC": "Valorização da diversidade e inclusão de todos",
+    "alternativaD": "Foco apenas no rendimento acadêmico",
+    "correta": "C",
+    "explicacao": "A valorização da diversidade e inclusão de todos é essencial para um ambiente escolar inclusivo."
+  },
+  {
+    "enunciado": "Qual é um dos principais fatores para o abandono escolar?",
+    "alternativaA": "Participação ativa da família",
+    "alternativaB": "Acesso fácil à escola",
+    "alternativaC": "Condições socioeconômicas desfavoráveis",
+    "alternativaD": "Uso de tecnologias educacionais",
+    "correta": "C",
+    "explicacao": "Condições socioeconômicas desfavoráveis são um dos principais fatores para o abandono escolar."
+  },
+  {
+    "enunciado": "Como a educação pode impactar a saúde?",
+    "alternativaA": "Não tem relação",
+    "alternativaB": "Melhora a compreensão sobre prevenção de doenças",
+    "alternativaC": "Leva a escolhas piores de alimentação",
+    "alternativaD": "Aumenta o estresse da população",
+    "correta": "B",
+    "explicacao": "A educação melhora a compreensão sobre prevenção de doenças, impactando positivamente a saúde."
+  }
+]

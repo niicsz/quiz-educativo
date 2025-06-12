@@ -1,0 +1,20 @@
+CREATE TABLE quiz (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT
+);
+
+CREATE TABLE pergunta (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    quiz_id BIGINT,
+    enunciado TEXT NOT NULL,
+    FOREIGN KEY (quiz_id) REFERENCES quiz(id) ON DELETE CASCADE
+);
+
+CREATE TABLE alternativa (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    pergunta_id BIGINT NOT NULL,
+    texto VARCHAR(255) NOT NULL,
+    correta BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (pergunta_id) REFERENCES pergunta(id) ON DELETE CASCADE
+);
