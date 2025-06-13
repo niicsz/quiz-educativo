@@ -1,6 +1,8 @@
 package com.quiz.controller;
 
 import com.quiz.model.*;
+import com.quiz.model.dto.LoginRequest;
+import com.quiz.model.dto.ResponderRequest;
 import com.quiz.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +16,8 @@ public class QuizController {
     private QuizService service;
 
     @PostMapping("/login")
-    public User login(@RequestParam String nome, @RequestParam String email, @RequestParam String senha) {
-        return service.loginOuCadastro(nome, email, senha);
+    public User login(@RequestBody LoginRequest loginRequest) {
+        return service.loginOuCadastro(loginRequest.getNome(), loginRequest.getEmail(), loginRequest.getSenha());
     }
 
     @GetMapping("/perguntas")
@@ -24,8 +26,8 @@ public class QuizController {
     }
 
     @PostMapping("/responder")
-    public UserAnswer responder(@RequestParam Long usuarioId, @RequestParam Long perguntaId, @RequestParam String resposta) {
-        return service.responderPergunta(usuarioId, perguntaId, resposta);
+    public UserAnswer responder(@RequestBody ResponderRequest responderRequest) {
+        return service.responderPergunta(responderRequest.getUsuarioId(), responderRequest.getPerguntaId(), responderRequest.getResposta());
     }
 
     @GetMapping("/pontuacao/{usuarioId}")
