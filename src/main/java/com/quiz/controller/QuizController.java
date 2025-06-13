@@ -1,8 +1,8 @@
 package com.quiz.controller;
 
 import com.quiz.model.*;
-import com.quiz.model.dto.LoginRequest;
-import com.quiz.model.dto.ResponderRequest;
+import com.quiz.dto.LoginRequest;
+import com.quiz.dto.ResponderRequest;
 import com.quiz.service.QuizService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

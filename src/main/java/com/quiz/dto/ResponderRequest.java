@@ -1,4 +1,4 @@
-package com.quiz.model.dto;
+package com.quiz.dto;
 
 public class ResponderRequest {
   private Long usuarioId;
