@@ -1,31 +1,31 @@
 package com.quiz.model.dto;
 
 public class ResponderRequest {
-    private Long usuarioId;
-    private Long perguntaId;
-    private String resposta;
+  private Long usuarioId;
+  private Long perguntaId;
+  private String resposta;
 
-    public Long getUsuarioId() {
-        return usuarioId;
-    }
+  public Long getUsuarioId() {
+    return usuarioId;
+  }
 
-    public void setUsuarioId(Long usuarioId) {
-        this.usuarioId = usuarioId;
-    }
+  public void setUsuarioId(Long usuarioId) {
+    this.usuarioId = usuarioId;
+  }
 
-    public Long getPerguntaId() {
-        return perguntaId;
-    }
+  public Long getPerguntaId() {
+    return perguntaId;
+  }
 
-    public void setPerguntaId(Long perguntaId) {
-        this.perguntaId = perguntaId;
-    }
+  public void setPerguntaId(Long perguntaId) {
+    this.perguntaId = perguntaId;
+  }
 
-    public String getResposta() {
-        return resposta;
-    }
+  public String getResposta() {
+    return resposta;
+  }
 
-    public void setResposta(String resposta) {
-        this.resposta = resposta;
-    }
+  public void setResposta(String resposta) {
+    this.resposta = resposta;
+  }
 }
