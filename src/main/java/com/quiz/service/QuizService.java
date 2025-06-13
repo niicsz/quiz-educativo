@@ -3,6 +3,7 @@ package com.quiz.service;
 import com.quiz.model.*;
 import com.quiz.repository.*;
 import java.util.List;
+import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,23 +33,37 @@ public class QuizService {
   }
 
   public UserAnswer responderPergunta(Long usuarioId, Long perguntaId, String resposta) {
-    User usuario = usuarioRepo.findById(usuarioId).orElseThrow();
-    Question pergunta = perguntaRepo.findById(perguntaId).orElseThrow();
+    User usuario =
+        usuarioRepo
+            .findById(usuarioId)
+            .orElseThrow(() -> new NoSuchElementException("Usuário não encontrado"));
+    Question pergunta =
+        perguntaRepo
+            .findById(perguntaId)
+            .orElseThrow(() -> new NoSuchElementException("Pergunta não encontrada"));
 
     boolean correta = pergunta.getCorreta().equalsIgnoreCase(resposta);
-    if (correta) usuario.setPontuacao(usuario.getPontuacao() + 10);
-    usuarioRepo.save(usuario);
+    if (correta) {
+      usuario.setPontuacao(usuario.getPontuacao() + 10);
+      usuarioRepo.save(usuario); // Salva o usuário apenas se a resposta estiver correta
+    }
 
     UserAnswer respostaUsuario = new UserAnswer(null, usuario, pergunta, resposta, correta);
     return respostaRepo.save(respostaUsuario);
   }
 
   public int getPontuacao(Long usuarioId) {
-    return usuarioRepo.findById(usuarioId).orElseThrow().getPontuacao();
+    return usuarioRepo
+        .findById(usuarioId)
+        .orElseThrow(() -> new NoSuchElementException("Usuário não encontrado"))
+        .getPontuacao();
   }
 
   public List<UserAnswer> getHistorico(Long usuarioId) {
-    User u = usuarioRepo.findById(usuarioId).orElseThrow();
+    User u =
+        usuarioRepo
+            .findById(usuarioId)
+            .orElseThrow(() -> new NoSuchElementException("Usuário não encontrado"));
     return respostaRepo.findByUsuario(u);
   }
 }
