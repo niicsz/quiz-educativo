@@ -13,7 +13,7 @@ public class SwaggerConfig {
         .info(
             new Info()
                 .title("Quiz Educativo API")
-                .version("1.0.0")
+                .version("1.0.1")
                 .description("API para quiz educativo com Spring Boot"));
   }
 }
