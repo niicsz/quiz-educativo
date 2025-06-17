@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: html}">
+<body>
+    <div id="content">
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">Bem-vindo ao Quiz Educativo!</h1>
+            <p class="lead">Teste seus conhecimentos respondendo a perguntas interessantes.</p>
+            <hr class="my-4">
+            <p>Clique no botão abaixo para começar o quiz.</p>
+            <a class="btn btn-primary btn-lg" th:href="@{/quiz}" role="button">Começar Quiz</a>
+        </div>
+    </div>
+</body>
+</html>
+
