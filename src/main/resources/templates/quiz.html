@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head}">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav th:replace="~{layout :: nav}"></nav>
+
+    <div class="container mt-4">
+        <div id="content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Pergunta <span th:text="${currentQuestionNumber}">1</span> de <span th:text="${totalQuestions}">10</span></h2>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${question != null ? question.enunciado : ''}">Texto da pergunta</h5>
+                    <form th:if="${question != null}" th:action="@{/quiz/submit}" method="post" class="mt-4">
+                        <input type="hidden" name="questionId" th:value="${question.id}">
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer"
+                                   id="optionA" value="A" required>
+                            <label class="form-check-label" for="optionA"
+                                   th:text="${question.alternativaA}">Alternativa A</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer"
+                                   id="optionB" value="B" required>
+                            <label class="form-check-label" for="optionB"
+                                   th:text="${question.alternativaB}">Alternativa B</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer"
+                                   id="optionC" value="C" required>
+                            <label class="form-check-label" for="optionC"
+                                   th:text="${question.alternativaC}">Alternativa C</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer"
+                                   id="optionD" value="D" required>
+                            <label class="form-check-label" for="optionD"
+                                   th:text="${question.alternativaD}">Alternativa D</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Próxima</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div th:if="${showResults}" class="mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Resultado Final</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Você acertou <span th:text="${correctAnswers}">0</span> de <span th:text="${totalQuestions}">0</span> questões!</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar"
+                                 th:style="'width: ' + ${(correctAnswers / totalQuestions) * 100} + '%'"
+                                 th:text="${#numbers.formatDecimal((correctAnswers / totalQuestions) * 100, 0, 0) + '%'}">
+                            </div>
+                        </div>
+                        <a href="/quiz" class="btn btn-primary">Tentar Novamente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="~{layout :: scripts}"></div>
+</body>
+</html>
